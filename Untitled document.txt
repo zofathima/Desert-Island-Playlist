@@ -1,0 +1,54 @@
+﻿import java.util.Arrays;
+import java.util.ArrayList;
+class Playlist {
+  public static void main(String[] args){
+     String[] favoriteSongs = { "Playboi Carti - Magnolia", "Ken Carson - mewtwo", "Juice WRLD - KTM Drip", "A Boogie Wit da Hoodie - Say A''", "Drake - Search & Rescue", "Polo G - Martin & Gina", "King Von - Took Her To The O", "XXXTENTACION - UP LIKE AN INSOMNIAC", "21 Savage - ball w/out you", "Don Toliver - NEW DROP" }; 
+     System.out.println(favoriteSongs[0]);
+     System.out.println(favoriteSongs[1]);
+     System.out.println(favoriteSongs[2]);
+
+
+     ArrayList<String> desertIslandPlaylist = new ArrayList<>();
+     desertIslandPlaylist.add("21 Savage - 4L");
+     desertIslandPlaylist.add("Money Man - 24");
+     desertIslandPlaylist.add("Baby Keem - ORANGE SODA");
+     desertIslandPlaylist.add("Rich Amiri - ONE CALL");
+     desertIslandPlaylist.add("Lil Baby - Pure Cocaine");
+
+
+
+
+     desertIslandPlaylist.addAll(Arrays.asList(favoriteSongs));
+     
+     System.out.println(desertIslandPlaylist.size());
+
+
+     desertIslandPlaylist.remove("Don Toliver - NEW DROP");
+     desertIslandPlaylist.remove("Lil Baby - Pure Cocaine");
+     desertIslandPlaylist.remove("Polo G - Martin & Gina");
+     desertIslandPlaylist.remove("King Von - Took Her To The O");
+     desertIslandPlaylist.remove("21 Savage - ball w/out you");
+     desertIslandPlaylist.remove("Ken Carson - mewtwo");
+     desertIslandPlaylist.remove("21 Savage - 4L");
+     desertIslandPlaylist.remove("Money Man - 24");
+     desertIslandPlaylist.remove("Baby Keem - ORANGE SODA");
+     desertIslandPlaylist.remove("Rich Amiri - ONE CALL");
+     
+    System.out.println(desertIslandPlaylist);
+
+
+    int SongA = desertIslandPlaylist.indexOf("Playboi Carti - Magnolia");
+    int SongB = desertIslandPlaylist.indexOf("XXXTENTACION - UP LIKE AN INSOMNIAC"); 
+
+
+    String tempA = "Playboi Carti - Magnolia";
+    desertIslandPlaylist.set(SongA, "XXXTENTACION - UP LIKE AN INSOMNIAC");
+
+
+    desertIslandPlaylist.set(SongB, tempA);
+
+
+    System.out.println(desertIslandPlaylist);
+    
+  }
+}
